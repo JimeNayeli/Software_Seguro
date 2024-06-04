@@ -1,13 +1,10 @@
-from flask import Flask, jsonify
-import os
+from flask import Flask
 
 app = Flask(__name__)
 
-
 @app.route('/')
-def index():
-    return jsonify({"Hello World from Railway with Flask"})
-
+def hello_world():
+    return 'Hola Mundo!'
 
 if __name__ == '__main__':
-    app.run(debug=True, port=os.getenv("PORT", default=5000))
+    app.run(debug=True)
